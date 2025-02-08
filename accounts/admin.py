@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.hashers import make_password
 from .models import Waiter
 
 @admin.register(Waiter)
@@ -14,7 +15,7 @@ class WaiterAdmin(admin.ModelAdmin):
     )
 
     def save_model(self, request, obj, form, change):
-        """Ensure password is hashed when saved from the admin panel."""
-        if change and form.cleaned_data.get("password"):
-            obj.set_password(form.cleaned_data["password"])
-        obj.save()
+        """Ensure the password is always hashed when saving."""
+        if form.cleaned_data.get("password"):
+            obj.password = make_password(form.cleaned_data["password"])
+            super().save_model(request, obj, form, change)

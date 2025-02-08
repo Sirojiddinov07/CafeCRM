@@ -1,14 +1,6 @@
 from rest_framework import serializers
 from .models import Waiter
 
-class WaiterSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Waiter
-        fields = ['id', 'username', 'password']
-        extra_kwargs = {'password': {'write_only': True}}  # Hide password in responses
-
-
-
 class WaiterRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Waiter
