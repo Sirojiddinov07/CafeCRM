@@ -7,7 +7,8 @@ class Waiter(AbstractBaseUser):
     """Waiter model with custom authentication."""
 
     username = models.CharField(max_length=150, unique=True)
-    password = models.CharField(max_length=255)  # Password will be hashed
+    password = models.CharField(max_length=255)
+    balance = models.IntegerField(default=0)
 
     objects = WaiterManager()
 
