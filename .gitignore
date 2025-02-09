@@ -1,3 +1,23 @@
-.venv
-.idea
-.gitignore
+# Virtual environment
+.venv/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Byte-compiled / cached
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Django stuff
+db.sqlite3
+media/
+static/
+
+# Environment variables
+.env

@@ -1,6 +1,6 @@
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.db import models
-from accounts.maneger import WaiterManager
+from account.accounts.maneger import WaiterManager
 
 
 class Waiter(AbstractBaseUser):

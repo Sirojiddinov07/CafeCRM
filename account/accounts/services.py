@@ -1,7 +1,7 @@
 from django.contrib.auth.hashers import check_password, make_password
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import login, logout
-from .models import Waiter
+from account.accounts.models import Waiter
 
 
 

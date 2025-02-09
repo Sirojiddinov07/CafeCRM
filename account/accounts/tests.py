@@ -1,7 +1,7 @@
 from django.contrib.auth.hashers import make_password
 from rest_framework.test import APITestCase
 from rest_framework import status
-from accounts.models import Waiter
+from account.accounts.models import Waiter
 
 class WaiterAuthTests(APITestCase):
     """Test cases for Waiter login and logout."""

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.hashers import make_password
-from .models import Waiter
+from account.accounts.models import Waiter
 
 @admin.register(Waiter)
 class WaiterAdmin(admin.ModelAdmin):
